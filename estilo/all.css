@@ -30,6 +30,9 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
+
     background-color: var(--color1);
 }
 
@@ -128,5 +131,23 @@ section {
 
 iframe {
     width: 220px;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: var(--color2);
+    color: white;
+
+    height: 35px;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.395);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.457);
+
+    position: fixed;
+    top: 94.5%;
 }

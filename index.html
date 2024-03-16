@@ -11,13 +11,14 @@
     <title>site</title>
 </head>
 
-<body>
+<body onresize="tamanho()">
     <main>
         <header>
             <h1>
                 Testes de Tecnicas
             </h1>
             <img src="imagens/balduino-el-leproso-balduino-IV.jpg" alt="balduino iv">
+            <div id="foto"></div>
         </header>
         <menu id="burguer">
             <div id="dvv" class="material-symbols-outlined">
@@ -47,6 +48,9 @@
             </article>
         </section>
     </main>
+    <footer>
+        <p>Site criado por Pedro Henrique Moreira &copy;</p>
+    </footer>
 
     <script>
         var bur = document.getElementById('burguer')
@@ -55,6 +59,14 @@
 
         function clic() {
             if (lis.style.display == 'none') {
+                lis.style.display = 'block'
+            } else {
+                lis.style.display = 'none'
+            }
+        }
+
+        function tamanho() {
+            if (window.innerWidth >= 600) {
                 lis.style.display = 'block'
             } else {
                 lis.style.display = 'none'
