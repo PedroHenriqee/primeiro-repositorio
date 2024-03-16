@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'h1-font';
+    src: url('../fonts/Zeviero.ttf') format('truetype');
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -16,8 +25,12 @@
     --color2: #403124;
     --color3: #8C693E;
     --color4: #D98B2B;
-}
 
+    --font0: 'h1-font';
+}
+body {
+    background-color: var(--color1);
+}
 main {
     height: 100vh;
     width: 100vw;
@@ -31,14 +44,18 @@ header {
 
     background-color: var(--color4);
 }
-header > h1 {
-position: absolute;
-left: 5%;
-top: 5%;
 
-text-shadow: 1px 1px 5px var(--shadow);
+header>h1 {
+    font-family: var(--font0);
+
+    position: absolute;
+    left: 7%;
+    top: 4.5%;
+
+    text-shadow: 1px 1px 5px var(--shadow);
 }
-header > img {
+
+header>img {
     width: 130px;
 
     border-radius: 20%;
@@ -54,15 +71,36 @@ menu {
 
     padding-top: 5px;
 }
-#lis{
+
+#lis {
+    display: none;
+
     padding-top: 7px;
     background-color: var(--color3);
-    /* display: none; */
 }
-ul > li > a {
+
+#dvv {
+    padding: 5px;
+}
+
+#dvv:hover {
+    cursor: pointer;
+    background-color: rgba(211, 211, 211, 0.371);
+    border-radius: 50%;
+}
+
+ul>li {
+    margin-bottom: 5px;
+}
+
+ul>li>a {
     text-decoration: none;
-    
+
     color: var(--colorw);
+}
+
+ul>li>a:hover {
+    text-decoration: underline;
 }
 
 section {
@@ -80,9 +118,8 @@ section {
     gap: 20px;
 }
 
-article {
-    
-}
+article {}
+
 iframe {
     width: 220px;
     border-radius: 10px;

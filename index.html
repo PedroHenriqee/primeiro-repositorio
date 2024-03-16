@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo/all.css">
+    <link rel="stylesheet" href="estilos/generico.css">
     <title>site</title>
 </head>
 
@@ -18,10 +19,10 @@
             </h1>
             <img src="imagens/balduino-el-leproso-balduino-IV.jpg" alt="balduino iv">
         </header>
-        <menu>
-            <i class="material-symbols-outlined">
+        <menu id="burguer">
+            <div id="dvv" class="material-symbols-outlined">
                 menu
-            </i>
+            </div>
             <ul id="lis">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">LOGIN</a></li>
@@ -46,6 +47,20 @@
             </article>
         </section>
     </main>
+
+    <script>
+        var bur = document.getElementById('burguer')
+        var lis = document.getElementById('lis')
+        bur.addEventListener("click", clic)
+
+        function clic() {
+            if (lis.style.display == 'none') {
+                lis.style.display = 'block'
+            } else {
+                lis.style.display = 'none'
+            }
+        }
+    </script>
 </body>
 
 </html>
